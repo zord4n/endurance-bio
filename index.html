@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peptide Research Hub • Full</title>
+    <title>Peptide Research Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -17,159 +17,155 @@
     <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
             <div class="font-semibold tracking-tight text-xl">Peptide Research Hub</div>
-            <div class="text-xs px-3 py-1 bg-zinc-800 rounded-xl text-zinc-400">Full Research • Planning Phase</div>
+            <div class="text-xs px-3 py-1 bg-zinc-800 rounded-xl text-zinc-400">Full Research • Planning</div>
         </div>
     </nav>
 
     <div class="max-w-5xl mx-auto px-6 pt-10 pb-24">
         <div class="max-w-2xl">
             <h1 class="text-5xl font-semibold tracking-tighter">Research Tracks</h1>
-            <p class="text-xl text-zinc-400 mt-3">All research from the vault, organized and expandable. Click any track to see full details and leave feedback.</p>
+            <p class="text-xl text-zinc-400 mt-3">All research from the vault. Tap any track to expand and leave feedback.</p>
         </div>
 
-        <!-- Track 1: Supply Chain -->
-        <div class="track mt-10 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+        <!-- Track 1 -->
+        <div class="track mt-8 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Supply Chain &amp; Vendors</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
                     <div class="font-medium mb-2 text-emerald-400">Primary Suppliers</div>
-                    <ul class="space-y-1.5 text-zinc-400">
-                        <li>• Deepharma (China) — $150/g BPC-157, consistent quality</li>
-                        <li>• Cellmano Biotech (Hefei) — High purity focus</li>
-                        <li>• Sahe Peptides — Crypto payments accepted</li>
-                        <li>• Mandy Bio — Smaller MOQs, good for testing</li>
+                    <ul class="space-y-1 text-zinc-400">
+                        <li>• Deepharma (China) — $150/g BPC-157</li>
+                        <li>• Cellmano Biotech (Hefei) — High purity</li>
+                        <li>• Sahe Peptides — Crypto accepted</li>
+                        <li>• Mandy Bio — Smaller MOQs</li>
                     </ul>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Testing Protocol</div>
-                    <p class="text-zinc-400">Every batch sent to Janoshik Analytical (Czech Republic) for HPLC + MS. €180-300 per test. Nothing sold until COA verified.</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Logistics</div>
-                    <p class="text-zinc-400">DHL Express (3-5 days), HS Code 2933.99, 22% VAT reclaimable. Customs broker for first shipment recommended.</p>
+                    <div class="font-medium mt-6 mb-2 text-emerald-400">Testing</div>
+                    <p class="text-zinc-400">Every batch to Janoshik Analytical (Czech Republic) for HPLC + MS. Nothing sold until COA verified.</p>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Supply Chain</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Concerns about specific vendors or testing speed?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any concerns about vendors or testing?"></textarea>
                     <button onclick="saveFeedback(this, 'Supply Chain')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 2: Products -->
+        <!-- Track 2 -->
         <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Products &amp; Compounds</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
                     <div class="font-medium mb-2 text-emerald-400">Core Compounds</div>
-                    <ul class="space-y-1.5 text-zinc-400">
-                        <li>• BPC-157 (main healing focus)</li>
-                        <li>• TB-500 (avoid for elevated PSA cases)</li>
-                        <li>• Semaglutide, Tirzepatide</li>
-                        <li>• Melanotan II, AOD-9604, Ipamorelin, MOTS-c, GHK-Cu</li>
+                    <ul class="space-y-1 text-zinc-400">
+                        <li>• BPC-157 (main focus)</li>
+                        <li>• TB-500 (avoid for elevated PSA)</li>
+                        <li>• Semaglutide, Tirzepatide, Melanotan II, AOD-9604, Ipamorelin, MOTS-c, GHK-Cu</li>
                     </ul>
                     <div class="font-medium mt-6 mb-2 text-emerald-400">Dad-Specific Protocol</div>
-                    <p class="text-zinc-400">Muscle tear + PSA 4-6 + benign tumor → BPC-157 250 mcg 2× daily SQ. TB-500 excluded due to potential angiogenic effects.</p>
+                    <p class="text-zinc-400">Muscle tear + PSA 4-6 + benign tumor → BPC-157 250 mcg 2× daily SQ. TB-500 excluded.</p>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Products</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any compounds missing or dosing concerns?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Thoughts on compound selection?"></textarea>
                     <button onclick="saveFeedback(this, 'Products')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 3: Regulatory -->
+        <!-- Track 3 -->
         <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Regulatory &amp; Legal</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Business Structure</div>
-                    <p class="text-zinc-400">d.o.o. recommended over s.p. for liability protection. Product liability risk is real with research peptides.</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Compliance Rules</div>
-                    <ul class="space-y-1.5 text-zinc-400">
-                        <li>• “Research use only. Not for human consumption.” on all materials</li>
-                        <li>• Age verification (18+) at checkout</li>
-                        <li>• Liability waiver during purchase</li>
-                        <li>• GDPR for any quiz or personal data</li>
+                    <div class="font-medium mb-2 text-emerald-400">Structure</div>
+                    <p class="text-zinc-400">d.o.o. recommended for liability protection.</p>
+                    <div class="font-medium mt-6 mb-2 text-emerald-400">Key Rules</div>
+                    <ul class="space-y-1 text-zinc-400">
+                        <li>• “Research use only” on all materials</li>
+                        <li>• Age verification (18+)</li>
+                        <li>• Liability waiver at checkout</li>
+                        <li>• GDPR for quiz data</li>
                     </ul>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Regulatory</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any legal or compliance red flags?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any legal concerns?"></textarea>
                     <button onclick="saveFeedback(this, 'Regulatory')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 4: Content & SEO -->
+        <!-- Track 4 -->
         <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Content &amp; SEO Strategy</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Target Keywords</div>
-                    <p class="text-zinc-400">“peptidi slovenija”, “BPC-157 hrvatska”, “peptide shop EU”, “research peptides Slovenia”</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Content Plan</div>
-                    <p class="text-zinc-400">First 12 articles: BPC-157 guide, TB-500, testing explained, reconstitution, storage, SI/HR localized content. Long-term moat = 50+ researched articles.</p>
+                    <div class="font-medium mb-2 text-emerald-400">Keywords</div>
+                    <p class="text-zinc-400">peptidi slovenija, BPC-157 hrvatska, research peptides EU</p>
+                    <div class="font-medium mt-6 mb-2 text-emerald-400">Plan</div>
+                    <p class="text-zinc-400">First 12 articles + long-term moat of 50+ researched articles. Newsletter + YouTube.</p>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Content</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Keyword or content priorities?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Content priorities?"></textarea>
                     <button onclick="saveFeedback(this, 'Content & SEO')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 5: Financial -->
+        <!-- Track 5 -->
         <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Financial Model</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
                     <div class="font-medium mb-2 text-emerald-400">Startup Costs</div>
-                    <p class="text-zinc-400">Inventory ~€13,500 • Testing €1,750 • Setup ~€17,400 total</p>
+                    <p class="text-zinc-400">Inventory ~€13,500 • Testing €1,750 • Total setup ~€17,400</p>
                     <div class="font-medium mt-6 mb-2 text-emerald-400">Projections</div>
-                    <p class="text-zinc-400">Break-even Month 3 • 12-month revenue target €150-200K • Gross margin 55-65%</p>
+                    <p class="text-zinc-400">Break-even Month 3 • 12-month revenue €150-200K • 55-65% gross margin</p>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Financials</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Budget or pricing concerns?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Budget or pricing feedback?"></textarea>
                     <button onclick="saveFeedback(this, 'Financial Model')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 6: Risks & Open Questions -->
+        <!-- Track 6 -->
         <div class="track mt-4 border border-amber-900/40 bg-amber-950/10 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer hover:bg-zinc-800">
+            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
                 <div class="font-semibold text-xl">Risks &amp; Open Questions</div>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
             </div>
             <div class="track-content px-7 pb-8 text-sm text-zinc-300">
                 <div class="max-w-3xl">
                     <div class="font-medium mb-2 text-amber-400">Top Risks</div>
-                    <ul class="space-y-1.5 text-zinc-400">
-                        <li>• Payment processor shutdown (highest risk)</li>
-                        <li>• Customs seizure on first China shipment</li>
+                    <ul class="space-y-1 text-zinc-400">
+                        <li>• Payment processor shutdown (highest)</li>
+                        <li>• Customs seizure on first shipment</li>
                         <li>• EU regulatory changes</li>
-                        <li>• Competitor copies transparency model</li>
                     </ul>
                     <div class="font-medium mt-6 mb-2 text-amber-400">Open Questions</div>
-                    <p class="text-zinc-400">Platform choice (WooCommerce vs custom) • Quiz data storage • COA automation • Insurance requirements</p>
+                    <p class="text-zinc-400">Platform choice • Quiz data storage • COA automation • Insurance</p>
                 </div>
                 <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="text-sm font-medium mb-2">Feedback on Risks &amp; Questions</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any risks or open questions I missed?"></textarea>
+                    <div class="font-medium mb-2 text-sm">Feedback</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any risks or questions I missed?"></textarea>
                     <button onclick="saveFeedback(this, 'Risks & Open Questions')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
@@ -182,12 +178,12 @@
             const track = el.parentElement;
             track.classList.toggle('open');
             const icon = el.querySelector('i');
-            icon.style.transform = track.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+            icon.style.transform = track.classList.contains('open') ? 'rotate(180deg)' : '';
         }
         
         function saveFeedback(btn, track) {
             const ta = btn.parentElement.querySelector('textarea');
-            if (!ta.value.trim()) return alert("Write something first");
+            if (!ta.value.trim()) return alert("Please write feedback first");
             
             let data = JSON.parse(localStorage.getItem('peptide_research_feedback') || '[]');
             data.push({ track, text: ta.value.trim(), date: new Date().toISOString() });
@@ -200,9 +196,9 @@
             }, 1400);
         }
         
-        // Open first track on load
-        window.onload = () => {
-            document.querySelector('.track').classList.add('open');
+        window.onload = function() {
+            const first = document.querySelector('.track');
+            if (first) first.classList.add('open');
         }
     </script>
 </body>
