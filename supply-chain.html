@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain & Vendors • Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <div class="max-w-3xl mx-auto px-6 py-10">
+        <a href="index.html" class="text-xs text-emerald-400">← Back to all tracks</a>
+        
+        <h1 class="text-4xl font-semibold tracking-tighter mt-4">Supply Chain & Vendors</h1>
+        <div class="text-emerald-400 text-sm mt-2">Full research • Updated May 2026</div>
+
+        <div class="mt-10 prose prose-invert">
+            <h3>Primary Suppliers</h3>
+            <ul>
+                <li><strong>Deepharma</strong> — Consistent quality, $150/g BPC-157</li>
+                <li><strong>Cellmano Biotech</strong> (Hefei) — Known for high purity</li>
+                <li><strong>Sahe Peptides</strong> — Accepts crypto</li>
+                <li><strong>Mandy Bio</strong> — Smaller MOQs, good for testing</li>
+            </ul>
+
+            <h3 class="mt-8">Testing Protocol</h3>
+            <p>Every batch sent to <strong>Janoshik Analytical</strong> (Czech Republic) for HPLC + Mass Spec. Cost ~€180-300 per test. Nothing is sold until COA is back and verified.</p>
+
+            <h3 class="mt-8">Logistics & Import</h3>
+            <ul>
+                <li>DHL Express: 3-5 days</li>
+                <li>HS Code: 2933.99</li>
+                <li>VAT: 22% (reclaimable)</li>
+                <li>Customs broker recommended for first shipment</li>
+            </ul>
+
+            <h3 class="mt-8">Backup Options (EU)</h3>
+            <p>CASLO ApS (Denmark) and Genosphere (France) as faster but more expensive alternatives.</p>
+        </div>
+
+        <div class="mt-12 border-t border-zinc-800 pt-8">
+            <div class="font-medium mb-3">Feedback on Supply Chain</div>
+            <textarea id="fb" rows="4" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl p-5 text-sm" placeholder="Any concerns about specific vendors or testing?"></textarea>
+            <button onclick="saveFeedback()" class="mt-3 px-6 py-3 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+        </div>
+    </div>
+    <script>
+        function saveFeedback() {
+            const val = document.getElementById('fb').value;
+            if (!val) return;
+            alert("Feedback saved for Supply Chain track.");
+            document.getElementById('fb').value = '';
+        }
+    </script>
+</body>
+</html>

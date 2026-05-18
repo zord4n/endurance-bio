@@ -3,218 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peptide Research • Tracks</title>
+    <title>Peptide Research Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        .track-card { transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); }
-        .track-card:hover { transform: translateY(-2px); }
-        .research-track {
-            border: 1px solid #27251f;
-        }
-        .section-header {
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .track { transition: all 0.2s ease; }
+        .track:hover { transform: translateY(-1px); }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
-    <!-- Nav -->
-    <nav class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <span class="font-semibold tracking-tighter text-xl">Peptide Research</span>
-                <span class="px-2.5 py-px text-[10px] rounded bg-zinc-800 text-zinc-400">PLANNING</span>
-            </div>
-            <div class="text-xs text-zinc-500">Internal • SI/HR Focus</div>
+    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+            <div class="font-semibold tracking-tight text-xl">Peptide Research Hub</div>
+            <div class="text-xs text-zinc-500">Internal Planning • Pre-PRD</div>
         </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 pt-10 pb-24">
-        <!-- Header -->
-        <div>
-            <div class="text-emerald-400 text-xs tracking-[2px] font-medium">ENDURANCE BIO</div>
-            <h1 class="text-5xl font-semibold tracking-tighter mt-1">Research Tracks</h1>
-            <p class="text-xl text-zinc-400 mt-3 max-w-md">All research organized by category. Read, review, and leave feedback on each track.</p>
-        </div>
+    <div class="max-w-5xl mx-auto px-6 pt-10 pb-16">
+        <h1 class="text-4xl font-semibold tracking-tighter">Research Tracks</h1>
+        <p class="text-lg text-zinc-400 mt-2">Click any track to see the full research, decisions, and open questions.</p>
 
-        <!-- Research Tracks Grid -->
-        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="mt-10 grid md:grid-cols-2 gap-4">
             
             <!-- Supply Chain -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6">
-                <div class="flex items-center justify-between">
+            <a href="supply-chain.html" class="track block border border-zinc-800 bg-zinc-900 hover:border-zinc-700 rounded-3xl p-7">
+                <div class="flex justify-between">
                     <div>
-                        <div class="section-header text-emerald-400 font-medium">TRACK 01</div>
-                        <div class="font-semibold text-xl mt-1">Supply Chain & Vendors</div>
+                        <div class="text-emerald-400 text-xs font-medium tracking-widest">TRACK 01</div>
+                        <div class="font-semibold text-2xl mt-2">Supply Chain &amp; Vendors</div>
                     </div>
-                    <i class="fa-solid fa-truck text-2xl text-emerald-400/70"></i>
+                    <i class="fa-solid fa-truck text-3xl text-emerald-400/60 mt-1"></i>
                 </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Primary: Deepharma, Cellmano Biotech, Sahe Peptides</div>
-                    <div>• Backup: Mandy Bio, CASLO (Denmark)</div>
-                    <div>• Testing: Janoshik Analytical (HPLC + MS)</div>
-                    <div>• Logistics: DHL Express, HS 2933.99</div>
+                <div class="mt-5 text-sm text-zinc-400">
+                    Deep dive into suppliers, testing protocol, logistics, MOQs, and backup options.
                 </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-zinc-500">Status: <span class="text-emerald-400">Strong</span></div>
-                    <button onclick="leaveFeedback('supply-chain', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
+                <div class="mt-6 text-xs text-emerald-400 flex items-center gap-x-2">
+                    <span>View full research</span> <i class="fa-solid fa-arrow-right"></i>
                 </div>
-            </div>
+            </a>
 
-            <!-- Products & Compounds -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6">
-                <div class="flex items-center justify-between">
+            <!-- Products -->
+            <a href="products.html" class="track block border border-zinc-800 bg-zinc-900 hover:border-zinc-700 rounded-3xl p-7">
+                <div class="flex justify-between">
                     <div>
-                        <div class="section-header text-emerald-400 font-medium">TRACK 02</div>
-                        <div class="font-semibold text-xl mt-1">Products & Compounds</div>
+                        <div class="text-emerald-400 text-xs font-medium tracking-widest">TRACK 02</div>
+                        <div class="font-semibold text-2xl mt-2">Products &amp; Compounds</div>
                     </div>
-                    <i class="fa-solid fa-flask text-2xl text-emerald-400/70"></i>
+                    <i class="fa-solid fa-flask text-3xl text-emerald-400/60 mt-1"></i>
                 </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Core: BPC-157, TB-500, Semaglutide, Melanotan II</div>
-                    <div>• Secondary: AOD-9604, Ipamorelin, MOTS-c, GHK-Cu</div>
-                    <div>• Dad focus: BPC-157 250mcg 2×/day (avoid TB-500)</div>
-                    <div>• Future: Red light panels, PEMF</div>
+                <div class="mt-5 text-sm text-zinc-400">
+                    Full list of compounds, dosing research, dad-specific protocol, and expansion products.
                 </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-zinc-500">Status: <span class="text-emerald-400">Defined</span></div>
-                    <button onclick="leaveFeedback('products', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
+                <div class="mt-6 text-xs text-emerald-400 flex items-center gap-x-2">
+                    <span>View full research</span> <i class="fa-solid fa-arrow-right"></i>
                 </div>
-            </div>
+            </a>
 
-            <!-- Regulatory & Legal -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6">
-                <div class="flex items-center justify-between">
+            <!-- Regulatory -->
+            <a href="regulatory.html" class="track block border border-zinc-800 bg-zinc-900 hover:border-zinc-700 rounded-3xl p-7">
+                <div class="flex justify-between">
                     <div>
-                        <div class="section-header text-emerald-400 font-medium">TRACK 03</div>
-                        <div class="font-semibold text-xl mt-1">Regulatory & Legal</div>
+                        <div class="text-emerald-400 text-xs font-medium tracking-widest">TRACK 03</div>
+                        <div class="font-semibold text-2xl mt-2">Regulatory &amp; Legal</div>
                     </div>
-                    <i class="fa-solid fa-balance-scale text-2xl text-emerald-400/70"></i>
+                    <i class="fa-solid fa-gavel text-3xl text-emerald-400/60 mt-1"></i>
                 </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Structure: d.o.o. recommended (liability)</div>
-                    <div>• All materials: "Research use only"</div>
-                    <div>• Age verification + waiver at checkout</div>
-                    <div>• EU Directive 2001/83/EC considerations</div>
+                <div class="mt-5 text-sm text-zinc-400">
+                    Legal structure, disclaimers, EU compliance, age verification, and liability protection.
                 </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-zinc-500">Status: <span class="text-amber-400">In Progress</span></div>
-                    <button onclick="leaveFeedback('regulatory', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
+                <div class="mt-6 text-xs text-emerald-400 flex items-center gap-x-2">
+                    <span>View full research</span> <i class="fa-solid fa-arrow-right"></i>
                 </div>
-            </div>
+            </a>
 
             <!-- Content & SEO -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6">
-                <div class="flex items-center justify-between">
+            <a href="content.html" class="track block border border-zinc-800 bg-zinc-900 hover:border-zinc-700 rounded-3xl p-7">
+                <div class="flex justify-between">
                     <div>
-                        <div class="section-header text-emerald-400 font-medium">TRACK 04</div>
-                        <div class="font-semibold text-xl mt-1">Content & SEO</div>
+                        <div class="text-emerald-400 text-xs font-medium tracking-widest">TRACK 04</div>
+                        <div class="font-semibold text-2xl mt-2">Content &amp; SEO Strategy</div>
                     </div>
-                    <i class="fa-solid fa-globe text-2xl text-emerald-400/70"></i>
+                    <i class="fa-solid fa-globe text-3xl text-emerald-400/60 mt-1"></i>
                 </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Primary keywords: peptidi slovenija, BPC-157 hrvatska</div>
-                    <div>• First 12 articles planned</div>
-                    <div>• Moat: 50+ research-backed articles</div>
-                    <div>• Newsletter + YouTube long-form</div>
+                <div class="mt-5 text-sm text-zinc-400">
+                    Keyword research, content calendar, moat strategy, and multilingual approach.
                 </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-zinc-500">Status: <span class="text-emerald-400">Strong</span></div>
-                    <button onclick="leaveFeedback('content', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
+                <div class="mt-6 text-xs text-emerald-400 flex items-center gap-x-2">
+                    <span>View full research</span> <i class="fa-solid fa-arrow-right"></i>
                 </div>
-            </div>
-
-            <!-- Financial Model -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <div class="section-header text-emerald-400 font-medium">TRACK 05</div>
-                        <div class="font-semibold text-xl mt-1">Financial Model</div>
-                    </div>
-                    <i class="fa-solid fa-chart-pie text-2xl text-emerald-400/70"></i>
-                </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Inventory: ~€13,500 (first order)</div>
-                    <div>• Total setup: ~€17,400</div>
-                    <div>• Break-even: Month 3</div>
-                    <div>• 12-month target: €150-200K revenue</div>
-                </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-zinc-500">Status: <span class="text-emerald-400">Modelled</span></div>
-                    <button onclick="leaveFeedback('financial', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
-                </div>
-            </div>
-
-            <!-- Risks & Open Questions -->
-            <div class="track-card research-track bg-zinc-900 rounded-3xl p-6 border-amber-900/30">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <div class="section-header text-amber-400 font-medium">TRACK 06</div>
-                        <div class="font-semibold text-xl mt-1">Risks & Open Questions</div>
-                    </div>
-                    <i class="fa-solid fa-exclamation-triangle text-2xl text-amber-400/70"></i>
-                </div>
-                <div class="mt-6 text-sm text-zinc-400 space-y-1.5">
-                    <div>• Payment processor shutdown (highest risk)</div>
-                    <div>• Customs seizure on first shipment</div>
-                    <div>• Platform choice (Woo vs custom)</div>
-                    <div>• COA automation vs manual</div>
-                </div>
-                <div class="mt-6 pt-5 border-t border-zinc-800 flex items-center justify-between">
-                    <div class="text-xs text-amber-400">Highest priority</div>
-                    <button onclick="leaveFeedback('risks', this)" class="text-xs px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-2xl">Feedback</button>
-                </div>
-            </div>
+            </a>
 
         </div>
 
-        <!-- Global Feedback -->
-        <div class="mt-16 max-w-xl">
-            <div class="font-semibold tracking-tight text-xl mb-2">Overall Direction</div>
-            <p class="text-zinc-400 mb-4">Any thoughts on the overall research approach or missing tracks?</p>
-            
-            <div class="flex gap-3">
-                <textarea id="global" rows="3" class="flex-1 bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-sm" placeholder="Missing research area? Wrong priority?"></textarea>
-                <button onclick="submitGlobal()" class="px-8 bg-white text-zinc-950 rounded-3xl text-sm font-medium self-end h-fit py-4">Send</button>
-            </div>
+        <div class="mt-12 text-xs text-zinc-500">
+            All research pulled from existing notes. Click any track for full details + feedback.
         </div>
     </div>
-
-    <script>
-        function leaveFeedback(track, btn) {
-            const comment = prompt(`Feedback on ${track.replace('-', ' ')}:`);
-            if (!comment) return;
-            
-            saveFeedback(track, comment);
-            const original = btn.textContent;
-            btn.textContent = 'Saved';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = original;
-                btn.disabled = false;
-            }, 1400);
-        }
-        
-        function submitGlobal() {
-            const val = document.getElementById('global').value.trim();
-            if (!val) return alert("Add feedback first");
-            saveFeedback('overall', val);
-            document.getElementById('global').value = '';
-        }
-        
-        function saveFeedback(track, text) {
-            let data = JSON.parse(localStorage.getItem('peptide_research_feedback') || '[]');
-            data.push({ track, text, date: new Date().toISOString() });
-            localStorage.setItem('peptide_research_feedback', JSON.stringify(data));
-            
-            const toast = document.createElement('div');
-            toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-800 text-emerald-100 px-5 py-2 rounded-3xl text-sm';
-            toast.textContent = 'Feedback recorded';
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 1600);
-        }
-    </script>
 </body>
 </html>
