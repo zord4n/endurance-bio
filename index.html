@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; }
-        .track { transition: all 0.2s ease; }
         .track-content { display: none; }
         .track.open .track-content { display: block; }
     </style>
@@ -16,157 +15,235 @@
 <body class="bg-zinc-950 text-zinc-200">
     <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-            <div class="font-semibold tracking-tight text-xl">Peptide Research Hub</div>
-            <div class="text-xs px-3 py-1 bg-zinc-800 rounded-xl text-zinc-400">Full Research • Planning</div>
+            <div class="font-semibold tracking-tight text-xl">Research Hub</div>
+            <div class="text-xs px-3 py-1 bg-zinc-800 rounded-xl text-zinc-400">Full Depth</div>
         </div>
     </nav>
 
     <div class="max-w-5xl mx-auto px-6 pt-10 pb-24">
         <div class="max-w-2xl">
-            <h1 class="text-5xl font-semibold tracking-tighter">Research Tracks</h1>
-            <p class="text-xl text-zinc-400 mt-3">All research from the vault. Tap any track to expand and leave feedback.</p>
+            <h1 class="text-4xl font-semibold tracking-tighter">Peptide Business Research</h1>
+            <p class="text-base text-zinc-400 mt-2">All vault research. Tap any track to expand, read, and leave feedback.</p>
         </div>
 
-        <!-- Track 1 -->
-        <div class="track mt-8 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Supply Chain &amp; Vendors</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
+        <!-- 1. Supply Chain -->
+        <div class="track mt-6 border border-zinc-800 bg-zinc-900 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Supply Chain & Vendors</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
             </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Primary Suppliers</div>
-                    <ul class="space-y-1 text-zinc-400">
-                        <li>• Deepharma (China) — $150/g BPC-157</li>
-                        <li>• Cellmano Biotech (Hefei) — High purity</li>
-                        <li>• Sahe Peptides — Crypto accepted</li>
-                        <li>• Mandy Bio — Smaller MOQs</li>
-                    </ul>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Testing</div>
-                    <p class="text-zinc-400">Every batch to Janoshik Analytical (Czech Republic) for HPLC + MS. Nothing sold until COA verified.</p>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">PRIMARY SUPPLIERS (CHINA)</div>
+                        <p class="text-zinc-400">Deepharma ($150/g BPC-157 via ChemicalBook), Cellmano (Hefei), Yiwu Fengjin ($150/g BPC 99%), Nanjing Yuantai (Ipamorelin 95-99%), Guangdong Tuoyuan, Shenzhen Taiyuanchuangsheng, Heman Peptide (verified via Janoshik #87708), Mandy Bio (#101518), Sahe Peptides (#121829), Zhongtai Bio (Shenzhen), Zhejiang Paitai Bio (GMP grade). Plus 240 BPC-157 suppliers on ChemicalBook alone.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">BULK PRICING (PER GRAM)</div>
+                        <p class="text-zinc-400">BPC-157 $15-50 • TB-500 $30-80 • Semaglutide $100-300 • Melanotan II $20-60 • AOD-9604 $40-100 • Ipamorelin $30-80 • CJC-1295 $25-90. MOQs start at 1-10g per peptide. Prices drop significantly at 50g+.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">SHIPPING METHODS</div>
+                        <p class="text-zinc-400">DHL Express $8-25/kg (3-5 days, moderate customs risk) • Air Freight $3-8/kg (5-8 days) • Sea LCL $0.50-2/kg (30-40 days, safest customs) • EMS/China Post $5-15/kg (10-20 days, highest risk). Ports: Koper (SI), Rijeka (HR), Ljubljana Airport, Zagreb Airport.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">CUSTOMS STRATEGY</div>
+                        <p class="text-zinc-400">HS Code: 2937 (hormones), 2934 or 3822 (lab reagents). Declare as "Research biochemicals" — NOT pharmaceuticals. Include MSDS with shipment. Need EORI number. Customs broker recommended: Adriala Logistics or Intereuropa (SI), Obšped or Loginet (HR). VAT 22% SI / 25% HR import.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">EU ALTERNATIVES</div>
+                        <p class="text-zinc-400">CASLO ApS (Denmark, 24h quotes), Bachem (Switzerland, public BANB), JPT (Berlin), Genosphere (France), Lipopharm (Poland). 3-4x more expensive but no customs, faster delivery, better QC docs.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">JANOSHIK TESTING</div>
+                        <p class="text-zinc-400">Czech Republic. Standard tests: BPC-157 $180, TB-500 $180, Semaglutide $300, Blends $270, AOD-9604 (LCMS+CHNS) $290. 5-day turnaround. Expedite available at 100% surcharge. Public verification at janoshik.com/verification. QR codes available. This is your competitive moat — most competitors don't publish full COAs.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">STORAGE CONDITIONS</div>
+                        <p class="text-zinc-400">Lyophilized powder: -20°C = 2-3 years • 2-8°C = 12-18 months • Room temp dark dry = 3-6 months. Reconstituted: 30 days at 2-8°C in bac water, 24-48h in sterile water. Bulk powder: -20°C argon sealed = 3-5 years. Need medical freezer ~€300-500.</p>
+                    </div>
                 </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any concerns about vendors or testing?"></textarea>
-                    <button onclick="saveFeedback(this, 'Supply Chain')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Track 2 -->
-        <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Products &amp; Compounds</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
-            </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Core Compounds</div>
-                    <ul class="space-y-1 text-zinc-400">
-                        <li>• BPC-157 (main focus)</li>
-                        <li>• TB-500 (avoid for elevated PSA)</li>
-                        <li>• Semaglutide, Tirzepatide, Melanotan II, AOD-9604, Ipamorelin, MOTS-c, GHK-Cu</li>
-                    </ul>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Dad-Specific Protocol</div>
-                    <p class="text-zinc-400">Muscle tear + PSA 4-6 + benign tumor → BPC-157 250 mcg 2× daily SQ. TB-500 excluded.</p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Thoughts on compound selection?"></textarea>
-                    <button onclick="saveFeedback(this, 'Products')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Supply Chain</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Your thoughts on suppliers, testing, or logistics..."></textarea>
+                    <button onclick="save(this, 'Supply Chain')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 3 -->
-        <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Regulatory &amp; Legal</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
+        <!-- 2. Products & Pricing -->
+        <div class="track mt-3 border border-zinc-800 bg-zinc-900 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Products, Pricing & Competitors</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
             </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Structure</div>
-                    <p class="text-zinc-400">d.o.o. recommended for liability protection.</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Key Rules</div>
-                    <ul class="space-y-1 text-zinc-400">
-                        <li>• “Research use only” on all materials</li>
-                        <li>• Age verification (18+)</li>
-                        <li>• Liability waiver at checkout</li>
-                        <li>• GDPR for quiz data</li>
-                    </ul>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">COMPOUND COVERAGE</div>
+                        <p class="text-zinc-400">Core: BPC-157, TB-500, Semaglutide, Tirzepatide, Melanotan II, CJC-1295, Ipamorelin, AOD-9604, MOTS-c, GHK-Cu, NAD+, Retatrutide. Dad protocol: BPC-157 250mcg 2x/day SQ (avoid TB-500 for PSA).</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">MARGIN ANALYSIS</div>
+                        <p class="text-zinc-400">BPC-157: wholesale €5-7/vial, retail €30-45 = 50-67% margin. TB-500: €5-7 → €35-55 = same. Semaglutide: €30-60 → €89-129 = 55-65%. Melanotan II: €8-15 → €29-39 = 60-70%. GHK-Cu: €5-10/vial → €55-65 = huge margin. Some resellers achieve 4-8x markup with branding + COA transparency.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">COMPETITOR PRICING (SI/HR)</div>
+                        <p class="text-zinc-400">Pen Peptide SI: BPC-157 5mg €56, TB-500 5mg €56, Blend €98, GHK-Cu 100mg €62. Peptides-EU.com: TB-500 5mg €39.99, Melanotan II 10mg €29.99. Adria Peptides: Blend €124.90. Market range: BPC-157 5mg €39-65 good / €55-65 premium. Your pricing: anchor BPC at €59, bundle to €49.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">COMPETITOR LANDSCAPE</div>
+                        <p class="text-zinc-400">Adria Peptides (SI, strongest competitor), Pen Peptide SI (Shopify, Slovenian), Particle Peptides (Slovakia, 10yr), Baltic BioLabs (EU), Peptide Croatia (HR basic), CertaPeptides (Romania, compliance-heavy). SI/HR landscape is wide open — only 5-7 players, most with terrible SEO and thin content.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">TRUST SIGNAL GAP</div>
+                        <p class="text-zinc-400">Most competitors claim "3rd party tested" but don't publish full COAs. Pen Peptide has NO published COAs. Adria does. Gap opportunity: publish ALL Janoshik COAs with public verification links, batch tracking, QR codes on vials. This alone sets you apart in SI/HR.</p>
+                    </div>
                 </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any legal concerns?"></textarea>
-                    <button onclick="saveFeedback(this, 'Regulatory')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Track 4 -->
-        <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Content &amp; SEO Strategy</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
-            </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Keywords</div>
-                    <p class="text-zinc-400">peptidi slovenija, BPC-157 hrvatska, research peptides EU</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Plan</div>
-                    <p class="text-zinc-400">First 12 articles + long-term moat of 50+ researched articles. Newsletter + YouTube.</p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Content priorities?"></textarea>
-                    <button onclick="saveFeedback(this, 'Content & SEO')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Products</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Compounds, pricing or competitor thoughts..."></textarea>
+                    <button onclick="save(this, 'Products')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 5 -->
-        <div class="track mt-4 border border-zinc-800 bg-zinc-900 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Financial Model</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
+        <!-- 3. Regulatory & Legal -->
+        <div class="track mt-3 border border-zinc-800 bg-zinc-900 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Regulatory & Legal Deep Dive</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
             </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-emerald-400">Startup Costs</div>
-                    <p class="text-zinc-400">Inventory ~€13,500 • Testing €1,750 • Total setup ~€17,400</p>
-                    <div class="font-medium mt-6 mb-2 text-emerald-400">Projections</div>
-                    <p class="text-zinc-400">Break-even Month 3 • 12-month revenue €150-200K • 55-65% gross margin</p>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">REGULATORS BY COUNTRY</div>
+                        <p class="text-zinc-400">Slovenia: JAZMP (Javna agencija RS za zdravila), enforces Medicinal Products Act ZZdr-2 implementing EU 2001/83/EC. Croatia: HALMED, same EU framework. No special license needed IF sold as "research chemicals for laboratory use" without therapeutic claims.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">23 TRACKED PEPTIDES — LEGAL STATUS</div>
+                        <p class="text-zinc-400">4 Legal no Rx: GHK-Cu, NAD+, Glutathione, Vitamin B12. 2 Rx-only: Tirzepatide, Semaglutide. 17 Grey zone: BPC-157, TB-500, Selank, MOTS-c, AOD-9604, CJC-1295, Ipamorelin, Semax, DSIP, Epithalon, KPV, HGH, Liraglutide, Melanotan II, MK-677, PT-141, Retatrutide. SI enforcement moderate, HR lenient (BPC-157 discovered at Univ of Zagreb).</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">EU DIRECTIVE 2001/83/EC</div>
+                        <p class="text-zinc-400">Defines medicinal products by "presentation" (what you claim) and by "function" (pharmacological effects). Most active peptides could qualify by function. The "Research Use Only" label is accepted only for genuine lab use. Selling with syringes or injection guides = trigger for enforcement. No medical claims — EVER.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">PAYMENT PROCESSORS (THE BOTTLENECK)</div>
+                        <p class="text-zinc-400">❌ Stripe, PayPal, Square, Mollie, Adyen all ban peptides. ✅ Working processors: GreenLink Merchants (UK, 24h review), PayDiverse (UK), 2Accept, EMS-LTD Global, Adaptiv Payments, Sensapay. Setup fees €500-2,500. Per-transaction 3.5-6.5% + €0.20-0.50. Rolling reserve 10-15% for 6-12 months. MUST have multiple processors + crypto backup.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">CRYPTO PAYMENTS</div>
+                        <p class="text-zinc-400">Coinbase Commerce, NOWPayments (50+ coins), CoinGate (EU), BitPay. Zero chargeback risk, no restrictions. Offer 5% discount for crypto to incentivize. This is not optional — it's your backup if card processors shut you down.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">BUSINESS STRUCTURE</div>
+                        <p class="text-zinc-400">Year 1: s.p. z normiranimi stroški (€200 setup, ~€50-100/mo accounting, tax on only 20% of revenue). Year 2+: d.o.o. (€7,500 min capital, 22% CIT, liability protection). Strongly consider d.o.o. early for liability protection — product liability risk is real. Insurance: Howden Specialty (Lloyd's broker) ~€3-8K/year for €1M coverage if you can get it.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">TAX & VAT</div>
+                        <p class="text-zinc-400">VAT mandatory at €50K revenue. OSS scheme for EU cross-border sales (one monthly return). Import VAT 22% SI / 25% HR (reclaimable). If importing from China: IOSS for parcels ≤€150 or standard import VAT deferment. Revenue under €50K in Year 1 simple — normirani s.p. handles it.</p>
+                    </div>
                 </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Budget or pricing feedback?"></textarea>
-                    <button onclick="saveFeedback(this, 'Financial Model')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Regulatory</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Legal, compliance, or payment concerns..."></textarea>
+                    <button onclick="save(this, 'Regulatory')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
 
-        <!-- Track 6 -->
-        <div class="track mt-4 border border-amber-900/40 bg-amber-950/10 rounded-3xl overflow-hidden">
-            <div onclick="toggle(this)" class="px-7 py-6 flex justify-between items-center cursor-pointer active:bg-zinc-800">
-                <div class="font-semibold text-xl">Risks &amp; Open Questions</div>
-                <i class="fa-solid fa-chevron-down text-xl transition-transform"></i>
+        <!-- 4. Content & SEO -->
+        <div class="track mt-3 border border-zinc-800 bg-zinc-900 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Content & SEO Strategy</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
             </div>
-            <div class="track-content px-7 pb-8 text-sm text-zinc-300">
-                <div class="max-w-3xl">
-                    <div class="font-medium mb-2 text-amber-400">Top Risks</div>
-                    <ul class="space-y-1 text-zinc-400">
-                        <li>• Payment processor shutdown (highest)</li>
-                        <li>• Customs seizure on first shipment</li>
-                        <li>• EU regulatory changes</li>
-                    </ul>
-                    <div class="font-medium mt-6 mb-2 text-amber-400">Open Questions</div>
-                    <p class="text-zinc-400">Platform choice • Quiz data storage • COA automation • Insurance</p>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">KEYWORD MARKET MAP</div>
+                        <p class="text-zinc-400">"peptide shop slovenija" (SL, low competition, BEST OPPORTUNITY) • "peptidi hrvatska" (HR, low competition) • "kupi peptide" (HR/SL, very low) • "buy peptides europe" (EN, medium) • "BPC-157" (EN, high). SI/HR keywords have almost no competitors beyond Pen Peptide and Adria.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">SI/HR SEARCH LANDSCAPE</div>
+                        <p class="text-zinc-400">For "peptide shop slovenija": Pen Peptide SI (#1), Direct Peptides Slovenia (#2), drclark.si (#3), QSC landing page (#4). For "peptidi hrvatska": Pen Peptide HR (#1), Pharmax-HR (#2), Peptide Hrvatska (#3, very basic). Only 5-7 competitors per market, most with terrible SEO. A well-executed content strategy dominates these markets.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">CONTENT PLAN (FIRST 12)</div>
+                        <p class="text-zinc-400">BPC-157 Complete Guide • TB-500 for Tendon Recovery • Semaglutide vs Tirzepatide • How Peptide Testing Works (COAs) • Beginner's Guide to Research Peptides • Peptide Storage Best Practices • Peptidi: Vodič za Raziskave (SI) • BPC-157 Istraživanje i Primjena (HR) • How to Reconstitute Peptides • Red Light Therapy Science • Biohacking Stack Guide • Peptide Laws SI/HR.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">CONTENT GAPS TO FILL</div>
+                        <p class="text-zinc-400">No SI/HR localized content = first-mover advantage. No dosage calculators with local units = build tool. No Balkan-specific shipping guides = regional authority. No beginner's guides in SI/HR = captures early researchers. These are all wide open.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">ACQUISITION CHANNELS</div>
+                        <p class="text-zinc-400">#1 Google organic (SEO effort, no restrictions) • #2 Reddit organic (30% of buyers, NO direct links) • #3 Telegram groups (15%) • #4 Word of mouth (10%) • #5 Affiliates (10% commission, SI/HR fitness influencers). Google Ads = blocked for peptides. Facebook/IG = banned. SEO + Reddit + Telegram is the play.</p>
+                    </div>
                 </div>
-                <div class="mt-8 pt-6 border-t border-zinc-700">
-                    <div class="font-medium mb-2 text-sm">Feedback</div>
-                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any risks or questions I missed?"></textarea>
-                    <button onclick="saveFeedback(this, 'Risks & Open Questions')" class="mt-3 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Content</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Content priorities or SEO thoughts..."></textarea>
+                    <button onclick="save(this, 'Content & SEO')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Financial Model -->
+        <div class="track mt-3 border border-zinc-800 bg-zinc-900 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Financial Model & Budget</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </div>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">STARTUP COST BREAKDOWN (€40K)</div>
+                        <p class="text-zinc-400">BPC-157 100g powder €3,000 • TB-500 60g €3,000 • Semaglutide 20g €4,000 • Melanotan II 50g €1,500 • AOD-9604 30g €1,500 • Ipamorelin 30g €1,500 • CJC-1295 30g €1,500 • Vials/stoppers 5000 units €500 • Packaging €1,000 • Janoshik testing (15 tests) €3,000 • Shipping China-SI €1,000 • Working capital reserve €17,500 = €40,000 total.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">UNIT ECONOMICS (BPC-157 5MG EXAMPLE)</div>
+                        <p class="text-zinc-400">Wholesale €5-7 • Testing allocated €1-2 • Packaging €0.50-1 • Shipping €4-8 • Payment fees €1-2 • Total COGS €12-20 • Retail €30-45 • Gross profit €15-30/vial • Gross margin 50-67%. Best margins: GHK-Cu (3-5x), Melanotan II (3-4x). Thinnest: Semaglutide (2-2.5x).</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">REVENUE PROJECTION</div>
+                        <p class="text-zinc-400">Month 1: 20 orders avg €80 = €1,600 rev • Month 2: 50 = €4,250 • Month 3: 100 = €9,000 (break-even) • Month 4: 150 = €14,250 • Month 5: 200 = €20,000 • Month 6: 300 = €30,000. 12-month target €150-200K at 55-65% gross margin.</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-emerald-400 text-xs mb-2">PRICING RECOMMENDATIONS</div>
+                        <p class="text-zinc-400">BPC-157 5mg: €59 (1), €149/3 (€49.67), €229/5, €399/10. TB-500: same as BPC to encourage bundle purchases. Blend: €89-99. Semaglutide 5mg: €89-129. Melanotan II 10mg: €29-39. GHK-Cu 100mg: €55-65. Offer 5% crypto discount. Free shipping over €100. Bundle: €98 vs €112 separate.</p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Financials</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Budget, pricing or projections..."></textarea>
+                    <button onclick="save(this, 'Financial Model')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Risks & Open Questions -->
+        <div class="track mt-3 border border-amber-900/40 bg-amber-950/10 rounded-2xl overflow-hidden">
+            <div onclick="toggle(this)" class="px-6 py-5 flex justify-between items-center cursor-pointer active:bg-zinc-800">
+                <div class="font-semibold text-lg">Risks & Open Questions</div>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </div>
+            <div class="track-content px-6 pb-6 text-sm text-zinc-300">
+                <div class="max-w-3xl space-y-4">
+                    <div>
+                        <div class="font-medium text-amber-400 text-xs mb-2">HIGHEST RISKS</div>
+                        <p class="text-zinc-400">1. Payment processor shutdown (HIGH — have 2+ ready + crypto). 2. Customs seizure of first China shipment (MED — use EU warehouse or CASLO backup). 3. EU regulatory changes for research peptides (MED-SLOW — monitor JAZMP/HALMED). 4. Competitor copies transparency model (MED — first-mover advantage + brand). 5. Social media/ads banned (HIGH — SEO is the real moat).</p>
+                    </div>
+                    <div>
+                        <div class="font-medium text-amber-400 text-xs mb-2">OPEN QUESTIONS</div>
+                        <p class="text-zinc-400">WooCommerce vs custom build? • Quiz data storage (localStorage vs account vs email)? • COA automation: Janoshik API vs manual upload? • Liability insurance — Howden quote needed, €3-8K/year? • Shipping carriers integration for tracking? • Returns/dispute handling policy? • d.o.o. now or after reaching €50K?</p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-5 border-t border-zinc-700">
+                    <div class="font-medium mb-2 text-sm">Feedback on Risks</div>
+                    <textarea class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl p-4 text-sm" placeholder="Any risks or questions I missed..."></textarea>
+                    <button onclick="save(this, 'Risks & Open Questions')" class="mt-2 px-6 py-2 bg-emerald-600 rounded-2xl text-sm">Save Feedback</button>
                 </div>
             </div>
         </div>
@@ -175,31 +252,20 @@
 
     <script>
         function toggle(el) {
-            const track = el.parentElement;
-            track.classList.toggle('open');
-            const icon = el.querySelector('i');
-            icon.style.transform = track.classList.contains('open') ? 'rotate(180deg)' : '';
+            const t = el.parentElement;
+            t.classList.toggle('open');
+            el.querySelector('i').style.transform = t.classList.contains('open') ? 'rotate(180deg)' : '';
         }
-        
-        function saveFeedback(btn, track) {
+        function save(btn, track) {
             const ta = btn.parentElement.querySelector('textarea');
-            if (!ta.value.trim()) return alert("Please write feedback first");
-            
-            let data = JSON.parse(localStorage.getItem('peptide_research_feedback') || '[]');
-            data.push({ track, text: ta.value.trim(), date: new Date().toISOString() });
-            localStorage.setItem('peptide_research_feedback', JSON.stringify(data));
-            
+            if (!ta.value.trim()) return;
+            let d = JSON.parse(localStorage.getItem('fb')||'[]');
+            d.push({track, text: ta.value.trim(), date: new Date().toISOString()});
+            localStorage.setItem('fb', JSON.stringify(d));
             btn.textContent = 'Saved';
-            setTimeout(() => {
-                btn.textContent = 'Save Feedback';
-                ta.value = '';
-            }, 1400);
+            setTimeout(() => { btn.textContent = 'Save Feedback'; ta.value=''; }, 1200);
         }
-        
-        window.onload = function() {
-            const first = document.querySelector('.track');
-            if (first) first.classList.add('open');
-        }
+        window.onload = () => document.querySelector('.track').classList.add('open');
     </script>
 </body>
 </html>
