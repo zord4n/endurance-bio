@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Research Hub • Planning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .research-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .research-card:hover { transform: translateY(-1px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .section { scroll-margin-top: 80px; }
+        .feedback-bar { background: #111; }
+        .nav-link { transition: color 0.1s ease; }
+        .nav-link:hover { color: #fff; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <nav class="border-b border-zinc-800 bg-zinc-950 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
+            <div class="flex items-center gap-x-3">
+                <div class="font-semibold tracking-tight text-xl">Peptide Research Hub</div>
+                <div class="px-2.5 py-0.5 text-[10px] bg-zinc-800 rounded text-zinc-400">Planning Phase</div>
+            </div>
+            <div class="flex items-center gap-x-6 text-sm">
+                <a href="#vision" class="nav-link text-zinc-400">Vision</a>
+                <a href="#research" class="nav-link text-zinc-400">Research Areas</a>
+                <a href="#questions" class="nav-link text-zinc-400">Open Questions</a>
+                <a href="#feedback" class="nav-link text-zinc-400">Feedback</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 pt-12 pb-20">
+        <!-- Header -->
+        <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-x-2 text-xs tracking-[1.5px] text-emerald-400 font-medium mb-3">INTERNAL PLANNING DOCUMENT</div>
+            <h1 class="text-5xl font-semibold tracking-tighter leading-none">Peptide Business<br>Research & Planning</h1>
+            <p class="mt-4 text-xl text-zinc-400">Consolidated research, decisions, risks, and open questions for the Endurance Bio project.</p>
+            
+            <div class="flex items-center gap-x-4 mt-8 text-sm">
+                <div class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-2xl text-xs">Budget: €40K</div>
+                <div class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-2xl text-xs">Markets: SI / HR + EU</div>
+                <div class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-2xl text-xs">Phase: Pre-PRD Planning</div>
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div id="vision" class="section mt-16">
+            <div class="flex items-center gap-x-3 mb-6">
+                <div class="text-emerald-400"><i class="fa-solid fa-bullseye text-lg"></i></div>
+                <div class="font-semibold text-lg tracking-tight">Vision & Positioning</div>
+            </div>
+            
+            <div class="prose prose-invert max-w-none text-zinc-300">
+                <p>This is not a standard peptide reseller. We are building a <strong>European biohacking brand</strong> grounded in transparent third-party testing, scientific rigor, and local/regional trust. The wedge is high-purity research peptides with public COAs. The moat will be deep educational content + systems thinking.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 not-prose">
+                    <div class="research-card border border-zinc-800 bg-zinc-900 p-5 rounded-3xl">
+                        <div class="text-xs text-emerald-400 font-medium mb-2">UNFAIR ADVANTAGE</div>
+                        <div class="text-sm">You build systems for a living. This combines automation + supply chain + content. Most competitors fail at one or more of these.</div>
+                    </div>
+                    <div class="research-card border border-zinc-800 bg-zinc-900 p-5 rounded-3xl">
+                        <div class="text-xs text-emerald-400 font-medium mb-2">BRAND POSITIONING</div>
+                        <div class="text-sm">Different from US "bro science" shops and shady Alibaba resellers. European, clinical, transparent.</div>
+                    </div>
+                    <div class="research-card border border-zinc-800 bg-zinc-900 p-5 rounded-3xl">
+                        <div class="text-xs text-emerald-400 font-medium mb-2">EXPANSION PATH</div>
+                        <div class="text-sm">Peptides → Red light therapy → PEMF, grounding, sauna → full health optimization stack.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Areas -->
+        <div id="research" class="section mt-20">
+            <div class="flex items-center gap-x-3 mb-6">
+                <div class="text-emerald-400"><i class="fa-solid fa-book text-lg"></i></div>
+                <div class="font-semibold text-lg tracking-tight">Key Research Areas</div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Supply Chain -->
+                <div class="research-card border border-zinc-800 rounded-3xl p-6">
+                    <div class="font-semibold mb-3 flex items-center gap-x-2"><i class="fa-solid fa-truck w-4"></i> Supply Chain & Sourcing</div>
+                    <div class="text-sm text-zinc-400 space-y-2">
+                        <div>• Primary suppliers: Deepharma, Cellmano, Sahe Peptides, Mandy Bio</div>
+                        <div>• First order target: ~70g across BPC-157, TB-500, Semaglutide, Melanotan II, AOD-9604, Ipamorelin</div>
+                        <div>• Testing: Every batch to Janoshik (Czech Republic) before sale</div>
+                        <div>• Logistics: DHL Express, HS Code 2933.99, 22% VAT reclaimable</div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-zinc-800">
+                        <button onclick="showFeedbackModal('supply-chain')" class="text-xs px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-2xl flex items-center gap-x-2 text-emerald-400">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <span>Leave feedback on sourcing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Regulatory -->
+                <div class="research-card border border-zinc-800 rounded-3xl p-6">
+                    <div class="font-semibold mb-3 flex items-center gap-x-2"><i class="fa-solid fa-gavel w-4"></i> Regulatory & Legal</div>
+                    <div class="text-sm text-zinc-400 space-y-2">
+                        <div>• "Research use only. Not for human consumption." on all materials</div>
+                        <div>• d.o.o. structure recommended for liability protection</div>
+                        <div>• Age verification + liability waiver at checkout</div>
+                        <div>• EU Medicinal Products Directive considerations</div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-zinc-800">
+                        <button onclick="showFeedbackModal('regulatory')" class="text-xs px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-2xl flex items-center gap-x-2 text-emerald-400">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <span>Leave feedback on compliance</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Content & SEO -->
+                <div class="research-card border border-zinc-800 rounded-3xl p-6">
+                    <div class="font-semibold mb-3 flex items-center gap-x-2"><i class="fa-solid fa-globe w-4"></i> Content & SEO Strategy</div>
+                    <div class="text-sm text-zinc-400 space-y-2">
+                        <div>• Target keywords: "peptidi slovenija", "BPC-157 hrvatska", "peptide shop EU"</div>
+                        <div>• First 12 articles planned (BPC-157, TB-500, testing explained, reconstitution, etc.)</div>
+                        <div>• Content moat: 50+ researched articles over time</div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-zinc-800">
+                        <button onclick="showFeedbackModal('content')" class="text-xs px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-2xl flex items-center gap-x-2 text-emerald-400">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <span>Leave feedback on content</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Financial -->
+                <div class="research-card border border-zinc-800 rounded-3xl p-6">
+                    <div class="font-semibold mb-3 flex items-center gap-x-2"><i class="fa-solid fa-chart-line w-4"></i> Financial Model</div>
+                    <div class="text-sm text-zinc-400 space-y-2">
+                        <div>• Initial inventory: ~€13,500</div>
+                        <div>• Testing + setup: ~€3,500</div>
+                        <div>• Projected break-even: Month 3</div>
+                        <div>• 12-month revenue target: €150-200K</div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-zinc-800">
+                        <button onclick="showFeedbackModal('financial')" class="text-xs px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-2xl flex items-center gap-x-2 text-emerald-400">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <span>Leave feedback on numbers</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Questions -->
+        <div id="questions" class="section mt-20">
+            <div class="flex items-center gap-x-3 mb-6">
+                <div class="text-amber-400"><i class="fa-solid fa-question-circle text-lg"></i></div>
+                <div class="font-semibold text-lg tracking-tight">Open Questions & Risks</div>
+            </div>
+            
+            <div class="border border-amber-900/40 bg-amber-950/10 rounded-3xl p-8">
+                <div class="grid md:grid-cols-2 gap-y-8 gap-x-8 text-sm">
+                    <div>
+                        <div class="font-medium text-amber-400 mb-3">Critical Open Questions</div>
+                        <ul class="space-y-3 text-zinc-400">
+                            <li class="flex gap-x-3"><span class="text-amber-400 mt-1">•</span> Hosting & platform decision (WooCommerce vs custom Next.js)</li>
+                            <li class="flex gap-x-3"><span class="text-amber-400 mt-1">•</span> How to handle quiz data storage & personalization</li>
+                            <li class="flex gap-x-3"><span class="text-amber-400 mt-1">•</span> Janoshik API integration vs manual COA upload</li>
+                            <li class="flex gap-x-3"><span class="text-amber-400 mt-1">•</span> Insurance requirements for product liability</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-medium text-amber-400 mb-3">Top Risks</div>
+                        <ul class="space-y-3 text-zinc-400">
+                            <li class="flex gap-x-3"><span class="text-red-400 mt-1">•</span> Payment processor shutdown (high risk)</li>
+                            <li class="flex gap-x-3"><span class="text-red-400 mt-1">•</span> Customs seizure on first China shipment</li>
+                            <li class="flex gap-x-3"><span class="text-red-400 mt-1">•</span> EU regulatory crackdown on research chemicals</li>
+                            <li class="flex gap-x-3"><span class="text-red-400 mt-1">•</span> Competitor copies transparency model quickly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-amber-900/30">
+                    <button onclick="showFeedbackModal('open-questions')" class="px-5 py-2.5 text-sm bg-amber-900/30 hover:bg-amber-900/50 text-amber-300 rounded-2xl flex items-center gap-x-2">
+                        <span>Comment on open questions or risks</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Hub -->
+        <div id="feedback" class="section mt-20">
+            <div class="max-w-xl">
+                <div class="font-semibold text-lg tracking-tight mb-2">Global Feedback</div>
+                <p class="text-zinc-400 mb-6">Leave any thoughts, concerns, or ideas about the overall direction here. This feeds directly into planning.</p>
+                
+                <div class="space-y-4">
+                    <textarea id="global-feedback" rows="4" placeholder="What should we focus on first? Any major risks I'm missing? Content strategy thoughts?" class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-sm focus:outline-none"></textarea>
+                    
+                    <button onclick="submitGlobalFeedback()" class="px-8 py-3 bg-white text-zinc-950 font-medium rounded-3xl hover:bg-white/90 transition-all">
+                        Submit Feedback
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div class="max-w-md w-full mx-4 bg-zinc-900 border border-zinc-700 rounded-3xl p-7">
+            <div class="flex justify-between items-center mb-5">
+                <div id="modal-title" class="font-semibold"></div>
+                <button onclick="closeFeedbackModal()" class="text-zinc-400 hover:text-white text-xl leading-none">×</button>
+            </div>
+            
+            <textarea id="modal-feedback" rows="4" class="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-5 py-4 text-sm" placeholder="Your thoughts..."></textarea>
+            
+            <div class="mt-4 flex gap-x-3">
+                <button onclick="submitModalFeedback()" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl text-sm font-medium">Save Feedback</button>
+                <button onclick="closeFeedbackModal()" class="flex-1 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-2xl text-sm">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = '';
+        
+        function showFeedbackModal(section) {
+            currentSection = section;
+            const modal = document.getElementById('feedback-modal');
+            const title = document.getElementById('modal-title');
+            
+            const titles = {
+                'supply-chain': 'Supply Chain & Sourcing Feedback',
+                'regulatory': 'Regulatory & Legal Feedback',
+                'content': 'Content & SEO Feedback',
+                'financial': 'Financial Model Feedback',
+                'open-questions': 'Open Questions & Risks Feedback'
+            };
+            
+            title.textContent = titles[section] || 'Feedback';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('modal-feedback').focus();
+        }
+        
+        function closeFeedbackModal() {
+            const modal = document.getElementById('feedback-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.getElementById('modal-feedback').value = '';
+        }
+        
+        function submitModalFeedback() {
+            const text = document.getElementById('modal-feedback').value.trim();
+            if (!text) return alert("Please add some feedback");
+            
+            saveFeedback(currentSection, text);
+            closeFeedbackModal();
+        }
+        
+        function submitGlobalFeedback() {
+            const text = document.getElementById('global-feedback').value.trim();
+            if (!text) return alert("Please add some feedback");
+            
+            saveFeedback('global', text);
+            document.getElementById('global-feedback').value = '';
+        }
+        
+        function saveFeedback(section, text) {
+            let feedback = JSON.parse(localStorage.getItem('peptide_research_feedback') || '[]');
+            feedback.push({
+                section: section,
+                feedback: text,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('peptide_research_feedback', JSON.stringify(feedback));
+            
+            const btns = document.querySelectorAll('button');
+            const originalTexts = [];
+            
+            // Simple success indication
+            const successMsg = document.createElement('div');
+            successMsg.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-900 text-emerald-200 px-6 py-2 rounded-3xl text-sm';
+            successMsg.textContent = 'Feedback saved. Thank you.';
+            document.body.appendChild(successMsg);
+            
+            setTimeout(() => {
+                successMsg.style.transition = 'all 0.3s';
+                successMsg.style.opacity = '0';
+                setTimeout(() => successMsg.remove(), 300);
+            }, 1600);
+        }
+        
+        // Keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                e.preventDefault();
+                document.getElementById('global-feedback').focus();
+            }
+        });
+        
+        console.log('%c[Peptide Research Hub] Planning site ready. Feedback saves locally.', 'color:#3f3f46');
+    </script>
+</body>
+</html>
